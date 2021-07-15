@@ -1,0 +1,12 @@
+{% extends "Base.html" %}
+
+{% block content %}
+	<h1><center>Hello, {{user.username}}!</center></h1>
+        If you want to test our Neural Network Translator, put your english text here.
+	<form action="" method=post enctype=multipart/form-data>
+		<p><input type=string name=string>
+        	<input type=submit value=Upload>
+   	</form>
+	{{translation}} <br>
+	<br>
+{% endblock %}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends "Base.html" %}
+
+{% block content %}
+	<h1><center>Hello, {{user.username}}!</center></h1>
+        Your IP: {{user.IP}} <br>
+        Your browser: {{user.browser}} <br>
+        We know all about you.  ^-^ 
+	<hr>
+	<p>If you want to test our Detection Neural Network on photos, go to the page "Detection via upload" or "Detection via a link". </p>
+	<p>If you want to test our Neural Machine Translator on your text, go to the Translator pages.
+	<br>
+	en->ru is a translator from English to Russian.
+	<br>
+	ru->en is a translator from Russian to English.
+	</p>
+{% endblock %}

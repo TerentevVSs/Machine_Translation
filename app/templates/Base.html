@@ -1,0 +1,60 @@
+<html>
+    <head>
+	<meta charset="utf-8-sig"/>
+	{% if title %}
+        <title> {{title}} - Neural Detection </title>
+	{% else %}
+	<title> Welcome! </title>
+	{% endif %}
+    <style type="text/css">
+	.style_1 
+	{ 
+    	background: #FF9900;
+    	padding: 5px;
+   	padding-right: 20px; 
+    	border: solid 1px black; 
+   	float: left;
+	height: 40px;
+	font-size: 20pt;
+	}
+    </style>
+    </head>
+    <body LINK="red" VLINK="#00FF00" ALINK="blue"; bgcolor="#ccc">
+	<hr>
+	<div class="style_1"> <a href="{{url_for('home')}}"> Home </a></div>
+	<br>
+	<br>
+	<br>
+	<hr>
+	<div class="style_1"> <a href="{{url_for('upload')}}"> Detection via upload </a></div>
+	<div class="style_1"> <a href="{{url_for('link')}}"> Detection via a link </a> </div>
+	<br>
+	<br>
+	<br>
+	<hr>
+	<div class="style_1"> <a href="{{url_for('translator_simple_LSTM_ru_en_page')}}"> Translator simple LSTM ru->en</a> </div>
+	<div class="style_1"> <a href="{{url_for('translator_attention_LSTM_ru_en_page')}}"> Translator attention LSTM ru->en</a> </div>
+	<div class="style_1"> <a href="{{url_for('translator_attention_GRU_ru_en_page')}}"> Translator attention GRU ru->en</a> </div>
+	<div class="style_1"> <a href="{{url_for('translator_simple_LSTM_en_ru_page')}}"> Translator simple LSTM en->ru</a> </div>
+	<div class="style_1"> <a href="{{url_for('translator_attention_LSTM_en_ru_page')}}"> Translator attention LSTM en->ru</a> </div>
+	<div class="style_1"> <a href="{{url_for('translator_attention_GRU_en_ru_page')}}"> Translator attention GRU en->ru</a> </div>
+	<br>
+	<br>
+	<br>
+	<br>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+	<br>
+	<br>
+	<hr>
+	{% block content %}
+	{% endblock %}
+    </body>
+</html>
