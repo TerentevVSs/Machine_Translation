@@ -1,4 +1,4 @@
-# Object_Detection
+# Machine Translation
 The Machine Translation project at the Summer School in 2021.
 
 
