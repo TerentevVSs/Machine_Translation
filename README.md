@@ -1,6 +1,8 @@
 # Machine Translation
 The Machine Translation project at the Summer School in 2021.
 
+NOTE: Running this site in PyCharm will requre a free 4.5-5 GB of RAM. 
+
 We provide 3 different models for ru->en and en->ru translation. 
 
 In the folder "Models Notebooks" you can find Colab Notebooks for training Models.
