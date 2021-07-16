@@ -75,7 +75,7 @@ class Attention_LSTM(nn.Module):
         attention = self.v(energy).squeeze(2)
         # attention = [batch size, src len]
 
-        return temp_softmax(attention, dim=1)
+        return F.softmax(attention, dim=1)#temp_softmax(attention, dim=1)
 
 
 class Decoder_LSTM(nn.Module):
