@@ -15,7 +15,7 @@ def _len_sort_key(x):
 
 def temp_softmax(x, dim=0, temperature=1):
     e_x = torch.exp(x / temperature)
-    return e_x / torch.sum(e_x, dim=0)
+    return e_x / torch.sum(e_x, dim=dim)
 
 
 def tokenize_ru(x, tokenizer=WordPunctTokenizer()):
