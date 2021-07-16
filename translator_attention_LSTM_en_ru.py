@@ -29,5 +29,5 @@ model.load_state_dict(torch.load('attention_LSTM_bleu_en_ru.pt',
 
 def translate_attention_LSTM(example, SRC, TRG, translator=model,
                           device=device):
-    translation = translate(example, translator, TRG, SRC, device)
+    translation = translate(example, translator, SRC, TRG, device)
     return translation
